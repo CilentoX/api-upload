@@ -1,0 +1,184 @@
+:root {
+  --primary-color: black;
+  --secondary-color: aliceblue;
+  --hover-bg-color: #e0e0e088;
+  --hover-border-color: #333;
+  --button-bg-color: black;
+  --button-hover-bg-color: #333;
+  --glass-bg-color: rgba(24, 23, 23, 0.966);
+  --glass-border-color: rgba(129, 13, 13, 0.048);
+  --droparea-hover-text-color: rgb(20, 20, 20);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+h1 {
+  font-size: 24px;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  background-color: var(--glass-bg-color);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: 1px solid var(--glass-border-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-form,
+.files-list {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.drop-area {
+  width: 100%;
+  padding: 20px;
+  border: 2px dashed var(--secondary-color);
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.drop-area:hover {
+  background-color: var(--hover-bg-color);
+}
+
+.drop-area:hover p {
+  color: var(--droparea-hover-text-color);
+}
+
+.drop-area.dragover {
+  background-color: var(--hover-border-color);
+}
+
+.drop-area p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--secondary-color);
+}
+
+.upload-form input[type="text"],
+.upload-form button {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.upload-form input[type="text"] {
+  padding: 10px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+  font-size: 16px;
+  height: 40px;
+  margin-top: 10px;
+  background-color: transparent;
+  color: var(--secondary-color);
+}
+
+.upload-form input[type="text"]::placeholder {
+  color: var(--secondary-color);
+}
+
+.upload-form button {
+  background-color: var(--button-bg-color);
+  color: var(--secondary-color);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.upload-form button:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+#loadFilesButton {
+  width: 100%;
+  background-color: var(--button-bg-color);
+  color: var(--secondary-color);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin-bottom: 20px;
+}
+
+#loadFilesButton:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+.files-list {
+  margin-top: 20px;
+}
+
+.file-container {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: var(--glass-bg-color);
+  border-radius: 4px;
+  border: 1px solid var(--glass-border-color);
+}
+
+.file-details {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: var(--secondary-color);
+}
+
+.file-details li {
+  margin-bottom: 5px;
+}
+
+.file-details strong {
+  color: var(--secondary-color);
+}
+
+.files-list img,
+.files-list video {
+  display: block;
+  margin-top: 10px;
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.file-preview {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: var(--secondary-color);
+}
+
+.file-preview img,
+.file-preview video {
+  margin-top: 10px;
+  max-width: 100%;
+  border-radius: 4px;
+}
