@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const uri = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.jxoe5y5.mongodb.net/${process.env.MONGO_DATABASE}?retryWrites=true&w=majority`;
+const uri = process.env.MONGO_URI;
 
 mongoose.connect(uri);
 
