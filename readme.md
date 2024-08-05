@@ -146,8 +146,7 @@ To start the frontend application, follow these steps:
 Ensure that the following environment variables are set:
 
 - `PORT`: Port on which the server will listen (optional, defaults to 3000).
-- `MONGO_USER`: MongoDB username.
-- `MONGO_PASS`: MongoDB password.
+- `MONGO_URI`='yourURL'
 
 **Example `.env` File:**
 
