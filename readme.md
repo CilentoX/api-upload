@@ -153,8 +153,7 @@ Ensure that the following environment variables are set:
 
 ```
 PORT=3000
-MONGO_USER=your_mongo_user
-MONGO_PASS=your_mongo_password
+MONGO_URI='yourURL'
 ```
 
 ## Getting Started
